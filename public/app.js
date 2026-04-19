@@ -547,7 +547,11 @@ async function loadApiKeys() {
       return;
     }
     list.innerHTML = '';
-    keys.forEach(k => {
+    keys.forEach((k, idx) => {
+      if (idx === 0) {
+        const display = $('#active-key-display');
+        if (display) display.innerHTML = `<code id="current-key-val">${k.fullKey}</code> <button class="copy-cmd-btn" onclick="copyText('current-key-val')">📋</button>`;
+      }
       const card = document.createElement('div');
       card.className = 'key-card';
       card.innerHTML = `

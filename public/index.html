@@ -197,7 +197,23 @@
         </div>
 
         <div class="setting-group">
-          <label>🔑 API Keys</label>
+          <label>📱 Remote Access & API</label>
+          <p class="setting-hint">Use this link to talk to Luna from your phone (Mobile Data/Anywhere)</p>
+          <div class="cmd-box">
+            <div class="cmd-item">
+              <span class="cmd-label">Global Link:</span>
+              <code id="remote-link">https://lunar-assistant-sai.loca.lt</code>
+              <button class="copy-cmd-btn" onclick="copyText('remote-link')">📋</button>
+            </div>
+            <p class="setting-hint" style="margin-top:8px">Your Private API Key (for external apps):</p>
+            <div id="active-key-display" class="keys-list" style="margin-top:5px">
+              <span style="color:rgba(255,255,255,0.3);font-size:0.75rem">Generate a key below to see it here</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="setting-group">
+          <label>🔑 Key Management</label>
           <p class="setting-hint">Generate keys to use Lunar from your own apps, scripts, or other projects</p>
           <div class="model-controls">
             <input type="text" id="key-label" placeholder="Label (e.g. my-app)" class="key-input">
