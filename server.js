@@ -30,7 +30,7 @@ const io = new Server(server, {
 });
 
 // ─── Services ────────────────────────────────────────────
-const ollama = new OllamaService(config.get('model'));
+const ollama = new OllamaService(config.get('model'), config.get('ollamaUrl'));
 const memory = new MemoryService();
 const commands = new CommandService();
 
